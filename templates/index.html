@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block title %}Place to Grow{% endblock %}
+{% block body %}
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="/static/images/school.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/static/images/study1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/study.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing mt-3">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+          <img class="rounded-circle" alt="avatar1" src="/static/images/face1.jpg">
+        <h2 class="fw-normal">Sandra Friesen</h2><p style="font-style: italic">Web course teacher</p>
+        <p>Always remember that the computer does not have intelligence, but it acquires artificial intelligence through three main functional elements: the ability to analyze, the ability to compose, and logical reasoning.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" alt="avatar1" src="/static/images/face2.jpg">
+        <h2 class="fw-normal">Matt Cho</h2><p style="font-style: italic">Math logic teacher</p>
+          <p>Logical mathematical learning style is ideal for learners who are methodical and think in linear order. Logical-mathematical learning style refers to one's ability to analyze cause and effect relationships, reason, solve problems, and learn using numbers and abstract visual information</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" alt="avatar1" src="/static/images/face3.jpg">
+        <h2 class="fw-normal">Andrew Shwartz</h2><p style="font-style: italic">Database teacher</p>
+          <p>Databases support good data access because: Large volumes of data can be stored in one place. Multiple users can read and modify the data at the same time. Databases are searchable and sortable, so the data you need can be found quick and easily.</p>
+      </div>
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Featured first title. </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">It will blow your mind.</font></font></span></h2>
+        <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The human face is a complex and highly distinct part of the body. </font><font style="vertical-align: inherit;">In fact, it is one of the most complex signaling systems available to us; </font><font style="vertical-align: inherit;">It includes more than 40 structurally and functionally independent muscles, each of which can be operated independently of the other; </font><font style="vertical-align: inherit;">It is one of the strongest indicators of emotion.</font></font></p>
+      </div>
+      <div class="col-md-5">
+            <img src="/static/images/head.jpg">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oh yeah, that's good. </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">See for yourself.</font></font></span></h2>
+        <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">When we laugh or cry, we're projecting our emotions, allowing others to peek into our minds as they "read" our faces based on changes in key facial components such as the eyes, eyebrows, eyelids, nose, and lips.</font></font></p>
+      </div>
+      <div class="col-md-5 order-md-1">
+                    <img src="/static/images/laugh.jpg">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">And finally, this. </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Checkmate.</font></font></span></h2>
+        <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All the muscles in our body are supported by nerves that connect from all over the body to the spinal cord and brain. </font><font style="vertical-align: inherit;">This nerve communication is bidirectional, i.e. the nerve causes muscle contractions based on brain signals, and at the same time sends information about the muscle condition to the brain</font></font></p>
+      </div>
+      <div class="col-md-5">
+                            <img src="/static/images/body.jpg">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block tite %}
+School: news
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4 bootstrap snippets bootdey">
+        {% for news_item in news_list %}
+            {% with news_item = news_item %}
+                {% include 'news_item.html' %}
+            {% endwith %}
+        {% endfor %}
+    </div>
+{% endblock %}

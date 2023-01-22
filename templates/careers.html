@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block tite %}
+School: careers
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4 mb-4">
+    <div class="text-center mb-5">
+      <h3>Jobs opening</h3>
+    </div>
+
+    {% for job in job_list %}
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="d-flex flex-column flex-lg-row">
+          <span class="avatar avatar-text rounded-3 me-4 mb-2">HS</span>
+          <div class="row flex-fill">
+            <div class="col-8">
+              <h4 class="h5">{{ job[0] }}</h4>
+              <span class="badge bg-success">$60K - $100K</span>
+            </div>
+            <div class="col-4 text-lg-end">
+              <a href="{{ job[1] }}" class="btn btn-primary stretched-link" target="_blank">Apply</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %}
