@@ -44,7 +44,7 @@
         <div class="text-end">
             {% if current_user.is_authenticated %}
 {#                TODO: user account page#}
-                <a href="/logout" class="btn btn-outline-light me-2">{{ current_user.firstName }}</a>
+                <a href="/logout" class="btn btn-outline-light me-2">Welcome, {{ current_user.firstName }}</a>
             {% else %}
                 <a href="/login" class="btn btn-outline-light me-2">Login</a>
                 <a href="/sign_in" class="btn btn-warning">Sign-up</a>
@@ -75,12 +75,12 @@
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
-                        <h3>Place to Grow</h3>
+                        <h3>School for you</h3>
                         <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
                     </div>
                     <div class="col item social"><a class="link" href="https://www.facebook.com"><i class="fa-brands fa-facebook fa-2x" aria-hidden="true" style="font-size:20px"></i></a><a href="https://www.twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true" style="font-size:20px"></i></a><a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="font-size:20px"></i></a></div>
                 </div>
-                <p class="copyright">Place to Grow © 2023</p>
+                <p class="copyright">School for you © 2023</p>
             </div>
         </footer>
     </div>

@@ -10,6 +10,7 @@ class DBUser(db.Model):
     motherName = db.Column(db.Text())
     fatherName = db.Column(db.Text())
     gender = db.Column(db.Text())
+    role = db.Column(db.Text(), nullable=False)
     username = db.Column(db.Text(), nullable=False)
     email = db.Column(db.Text(), nullable=False)
     password = db.Column(db.Text(), nullable=False)

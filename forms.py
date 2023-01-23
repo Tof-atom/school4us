@@ -29,6 +29,7 @@ class RegisterForm(FlaskForm):
                               validators=[InputRequired(),
                                           EqualTo('password',
                                                   message='Passwords must match.')])
+    userRole = "general"
     submit = SubmitField('Signin')
     #
     # def validate_password(self, field):

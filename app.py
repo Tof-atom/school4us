@@ -22,13 +22,14 @@ from models import DBUser
 
 
 class SessionUser(UserMixin):
-    def __init__(self, _id, first_name, last_name, mother_name, father_name, gender, username, email, password=None):
+    def __init__(self, _id, first_name, last_name, mother_name, father_name, gender, userRole, username, email, password=None):
         self.id = _id
         self.firstName = first_name
         self.lastName = last_name
         self.motherName = mother_name
         self.fatherName = father_name
         self.gender = gender
+        self.role = userRole
         self.username = username
         self.email = email
         self.password = password
@@ -43,7 +44,7 @@ def load_user(user_id):
         # if not None, hide the password by setting it to None
         user.password = None
     return SessionUser(user.id, user.firstName, user.lastName,
-                       user.motherName, user.fatherName, user.gender, user.username, user.email, user.password)
+                       user.motherName, user.fatherName, user.gender, user.role, user.username, user.email, user.password)
 
 
 def find_user(email):
@@ -56,7 +57,7 @@ def find_user(email):
     res = DBUser.query.filter_by(email=email).first()
     if res:
         # user = SessionUser(res[0].username, res[0].email, res[0].phone, res[0].password)
-        user = SessionUser(res.id, res.firstName, res.lastName, res.motherName, res.fatherName, res.gender,
+        user = SessionUser(res.id, res.firstName, res.lastName, res.motherName, res.fatherName, res.gender, res.role,
                            res.username, res.email, res.password)
     else:
         user = None
@@ -114,7 +115,7 @@ def sign_in():
             salt = bcrypt.gensalt()
             password = bcrypt.hashpw(form.password.data.encode(), salt)
             user = DBUser(firstName=form.firstName.data, lastName=form.lastName.data, motherName=form.motherName.data,
-                          fatherName=form.fatherName.data, gender=form.gender.data, username=form.username.data, email=form.email.data,
+                          fatherName=form.fatherName.data, gender=form.gender.data, role=form.userRole, username=form.username.data, email=form.email.data,
                           password=password.decode())
             db.session.add(user)
             db.session.commit()
@@ -128,6 +129,8 @@ def sign_in():
 @app.route('/info')
 def info():
     return render_template("info.html")
+
+# TODO: 7, 8 from assignment 2
 
 
 @app.route('/careers')
